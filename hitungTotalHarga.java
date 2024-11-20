@@ -35,23 +35,23 @@ public class hitungTotalHarga {
     
        public static void main(String[] args) {
         Menu();
-        Scanner sc = new Scanner(System.in);
+        Scanner prasojo = new Scanner(System.in);
 
         System.out.print("Berapa jenis menu yang ingin Anda pesan? : ");
-        int jumlahMenu = sc.nextInt();
+        int jumlahMenu = prasojo.nextInt();
 
         int[] pilihanMenu = new int[jumlahMenu];
         int[] banyakItem = new int[jumlahMenu];
 
         for (int i = 0; i < jumlahMenu; i++) {
             System.out.print("\nMasukkan nomor menu ke-" + (i+1) + ": ");
-            pilihanMenu[i] = sc.nextInt();
+            pilihanMenu[i] = prasojo.nextInt();
             System.out.print("Masukkan jumlah item untuk menu ke-" + (i+1) + ": ");
-            banyakItem[i] = sc.nextInt();
+            banyakItem[i] = prasojo.nextInt();
         }
 
         System.out.print("Masukkan kode promo (jika ada): ");
-        String kodePromo = sc.next();
+        String kodePromo = prasojo.next();
 
         int totalHarga = hitungTotalHarga(pilihanMenu, banyakItem, kodePromo);
         System.out.println("Total harga untuk pesanan anda : Rp" + totalHarga);
